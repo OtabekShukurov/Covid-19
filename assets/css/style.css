@@ -94,7 +94,6 @@ img {
 body {
     font-family: 'Red Hat Display', sans-serif;
     background: linear-gradient(360deg, rgba(255, 241, 241, 0.5) 0%, rgba(255, 241, 241, 0) 108.69%);
-
 }
 
 a {
@@ -177,11 +176,30 @@ a {
     background-image: url("../img/Illustration1.png");
     background-repeat: no-repeat;
     background-size: 60%;
-    background-position: top 10% right;
+    background-position: top -20% right;
+}
+
+.alert .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.alert-info, .free {
+    width: 45%;
 }
 
 .alert-info {
-    width: 45%;
+    order: 0;
+}
+
+.free {
+    order: 1;
+}
+
+.free-img {
+    display: none;
+
 }
 
 .alert-title {
@@ -208,7 +226,7 @@ a {
 }
 
 .alert-link {
-    width: 50%;
+    width: 100%;
     padding: 24px 57px;
     background-color: #FB4C47;
     border-radius: 65px;
@@ -270,16 +288,15 @@ a {
 }
 
 .what-link {
-    width: 50%;
     margin: 60px 0;
     padding: 22px 50px;
-    background-color: #fa565226;
+    background-color: #fa5552;
     border-radius: 65px;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     text-transform: capitalize;
-    color: #FA5652;
+    color: #f7f7f7;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -401,6 +418,12 @@ a {
 
 }
 
+.do {
+    background-image: url("../img/leftGray.png");
+    background-repeat: no-repeat;
+    background-position: left bottom -50%;
+}
+
 .do .container {
     display: flex;
     flex-direction: column;
@@ -475,6 +498,8 @@ a {
 
 .mapWorld {
     width: 100%;
+    height: 550px;
+    /* object-fit: cover; */
 }
 
 .plus-minus {
@@ -492,7 +517,6 @@ a {
 
 .plus-minus button {
     border-radius: 10px;
-    padding: 10px 20px;
     border: none;
     margin-bottom: 20px;
     cursor: pointer;
@@ -722,3 +746,291 @@ a {
     color: #415E56;
     margin: 63px 0;
 }
+
+.three-lines-link {
+    display: none;
+    width: 30px;
+    margin-left: auto;
+}
+
+
+@media(max-width:1160px){
+    .container {
+        width: 1040px;
+    }
+}
+
+@media(max-width:1160px){
+    .contagion-item__title {
+        font-size: 24px;
+    }
+
+    .reports-title {
+        font-size: 30px;
+    }
+
+    .right-left {
+        width: 32%;
+    }
+
+    .help-input {
+        width: 50%;
+        margin-right: 45px;
+    }
+
+    .help-form form {
+        width: 100%;
+    }
+
+    .alert {
+        background-image: none;
+    }
+
+    .free {
+        width: 50%; 
+    }
+
+    .free-img {
+        display: block;
+
+    }
+
+    .logo-icon {
+        margin-right: 10px;
+    }
+}
+
+@media(max-width:1060px){
+    .container {
+        width: 940px;
+    }
+}
+
+@media(max-width:1160px){
+    .help-input {
+        margin-right: 20px;
+    }
+
+    .reports {
+        padding: 10px;
+    }
+
+    .map-search-button {
+        padding: 5px;
+    }
+
+    .contagion-item {
+        width: 30%;
+        padding: 10px;
+    }
+}
+
+@media(max-width:960px){
+    .container {
+        width: 840px;
+    }
+}
+
+@media(max-width:960px){
+    .alert-text, .what-subtitle, .contagion-subtitle, .symptomps-subtitle, .do-subtitle, .help-title {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .do-teim__title {
+        font-size: 25px;
+    }
+
+    .help-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .help-input {
+        padding: 20px;
+        width: 100%;
+        margin: 20px 0;
+        font-size: 24px;
+    }
+
+    .help-input::placeholder {
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+        border-bottom: 1px solid #000;
+
+    }
+
+    .submit-button {
+        margin-left: 0;
+    }
+
+    .footer-main {
+        align-items: flex-start;
+    }
+
+    .social-list, .footer-list {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .social-item {
+        width: 30px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:860px){
+    .container {
+        width: 740px;
+    }
+}
+
+@media(max-width:860px){
+    .three-lines-link {
+        display: block;
+    }
+
+    .nav-list, .nav-contact-link {
+        display: none;
+    }
+
+    .map .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-img {
+        width: 70%;
+    }
+
+    .mapWorld {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .reports {
+        width: 70%;
+    }
+
+    .right-left {
+        width: auto;
+    }
+
+    .contagion-item {
+        width: 32%;
+    }
+
+    .alert {
+        padding: 40px;
+    }
+
+    .help-form {
+        width: 70%;
+    }
+
+    .alert-text, .what-subtitle, .contagion-subtitle, .symptomps-subtitle, .do-subtitle, .help-title {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .what-text, .contagion-text, .symptomps-text, .do-text {
+        font-size: 14px;
+    }
+
+    .what {
+        padding-bottom: 40px;
+    }
+
+    .contagion-list {
+        margin-top: 40px;
+    }
+
+    .do {
+        margin-top: 40px;
+    }
+
+    .son {
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .do-list {
+        margin-bottom: 20px;
+    }
+
+    .do-item {
+        margin-bottom: 20px;
+    }
+
+    .help {
+        margin: 50px;
+    }
+
+    .help-title {
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width:760px){
+    .container {
+        width: 640px;
+    }
+}
+
+@media(max-width:760px){
+    .alert-subtext {
+        margin-top: 0;
+    }
+
+    .alert-text, .what-subtitle, .contagion-subtitle, .symptomps-subtitle, .do-subtitle, .help-title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .alert-subtext {
+        font-size: 13px;
+    }
+
+    .what-link {
+        margin: 20px 0;
+    }
+
+    .alert-link {
+        font-size: 21px;
+    }
+
+    .contagion-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contagion-item {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:660px){
+    .container {
+        width: 540px;
+    }
+}
+
+@media(max-width:660px){
+    .do-item__text {
+        font-size: 10px;
+    }
+
+    .plus-minus {
+        display: none;
+    }
+}
+
